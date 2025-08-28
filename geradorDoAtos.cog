@@ -1,0 +1,165 @@
+'''
+
+
+[[[cog	
+	def buildHeader():
+		#Monta Cabecalho da federacao
+		cog.outl("<?xml version='1.0' encoding='UTF-8'?>")
+		cog.outl("<federation>")
+		#Fim da montagem
+
+	def buildFederation(federationName, typeFederetion):
+
+		#Monta nome da federacao
+		cog.out("	<federationName>")
+		cog.out(federationName)
+		cog.outl("</federationName>")
+		#Fim da montagem
+
+		#Monta tipo da federacao
+		cog.out("	<federateType>")
+		cog.out(typeFederetion)
+		cog.outl("</federateType>")	
+		#Fim da montagem
+
+	def buildObject(nameObjectClass, typeSharing, typeDimensions, typeIsAbstract):
+		#Monta Objeto
+		cog.outl("	<objects>")
+		startBuildClass(nameObjectClass, typeSharing, typeDimensions, typeIsAbstract)	
+
+	def startBuildClass(nameObjectClass, typeSharing, typeDimensions, typeIsAbstract):
+		#Monta Classe
+		cog.outl("		<objectClass")
+
+		#Monta Name
+		cog.out("			name='")
+		cog.out(nameObjectClass)
+		cog.outl("'")
+		#Fim da montagem nome
+		
+		#Monta sharing
+		cog.out("			sharing='")
+		cog.out(typeSharing)
+		cog.outl("'")
+		#Fim da montagem sharing
+
+		#Monta dimensions
+		cog.out("			dimensions='")
+		cog.out(typeDimensions)
+		cog.outl("'")
+		#Fim da montagem dimensions
+
+		#Monta dimensions
+		cog.out("			isAbstract='")
+		cog.out(typeIsAbstract)
+		cog.outl("'")
+		#Fim da montagem isAbstract
+
+		#Inserindo Atributo
+		cog.outl("		>")
+
+		#Fim da montagem Classe
+
+	def enterAttribute(nameAttribute, typeDataType, typeOwnership, typeUpdateRate, typeTransportation):
+
+		#Monta Atributos
+		cog.outl("			<attribute")
+		cog.out("				name='")
+		cog.out(nameAttribute)
+		cog.outl("'")
+
+		cog.out("				dataType='")
+		cog.out(typeDataType)
+		cog.outl("'")
+
+		cog.out("				ownership='")
+		cog.out(typeOwnership)
+		cog.outl("'")
+
+		cog.out("				updateRate='")
+		cog.out(typeUpdateRate)
+		cog.outl("'")
+
+		cog.out("				transportation='")
+		cog.out(typeTransportation)
+		cog.outl("'")
+
+		#Sinaliza fim da montagem dos atributos
+		cog.outl("			/>")
+
+	def finishBuildClass():
+
+		cog.outl("		</objectClass>")
+		cog.outl("	</objects>")
+		#Fim da montagem Objeto
+
+	def startBuildInteractions(nameInteraction, typeSharing, typeDimensions, typeTransportation):
+		cog.outl("	<interactions>")
+		cog.outl("		<interactionClass")
+
+		#Monta Name
+		cog.out("			name='")
+		cog.out(nameInteraction)
+		cog.outl("'")
+		#Fim da montagem nome
+		
+		#Monta sharing
+		cog.out("			sharing='")
+		cog.out(typeSharing)
+		cog.outl("'")
+		#Fim da montagem sharing
+
+		#Monta dimensions
+		cog.out("			dimensions='")
+		cog.out(typeDimensions)
+		cog.outl("'")
+		#Fim da montagem dimensions
+
+		#Monta dimensions
+		cog.out("			isAbstract='")
+		cog.out(typeIsAbstract)
+		cog.outl("'")
+		#Fim da montagem isAbstract
+
+		#Inserindo parametros
+		cog.outl("		>")
+
+		#Fim da montagem da interação
+
+	def enterParameter(nameParameter, typeDataType):
+
+		#Monta Name
+		cog.out("			name='")
+		cog.out(nameParameter)
+		cog.outl("'")
+		#Fim da montagem nome
+
+		cog.outl("			/>")
+
+	def finishBuildInteractions():
+		cog.outl("		</interactionClass>")
+		#Fim da insersão de interações
+
+
+
+	#buildHeader()
+	#buildFederation(federationName, typeFederetion)
+	#buildObject(nameObjectClass, typeSharing, typeDimensions, typeIsAbstract)	#CHAMA STARTBUILDCLASS
+	#startBuildClass(nameObjectClass, typeSharing, typeDimensions, typeIsAbstract)
+
+	#Insira quantos quiser
+	#buildAttribute(nameAttribute, typeDataType, typeOwnership, typeUpdateRate, typeTransportation)
+	#finishBuildClass()
+
+	buildHeader()
+	buildFederation('tankFederation', 'tankSimulator')
+	buildObject('Tank','rede', 'X,Y,Z', 'NULL')
+	buildAttribute('Bala170m', 'municao', 'ownership', '2hz','federate')
+	buildAttribute('Bala200m', 'municao', 'ownership', '2hz','federate')
+	buildAttribute('Bala220m', 'municao', 'ownership', '2hz','federate')	
+	finishBuildClass()
+	
+
+]]]
+[[[end]]]
+'''
