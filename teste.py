@@ -1,17 +1,19 @@
 
 try:
-   	with open('Arquivo-Exemplo.def', 'r') as arq:
-       	texto = arq.read()
-       	palavras = texto.split()
+    with open('federation.txt', 'r') as arq:
+        texto    = arq.read()
+        palavras = texto.split()
 except FileNotFoundError:
-   	print(f"Erro ao abrir Arquivo.")
+    print(f"Erro ao abrir Arquivo.")
 except Exception as e:
-   	print(f"Erro = {e}")
+    print(f"Erro = {e}")
 
 
 '''
 
 [[[cog	
+	import cog
+
 	def buildHeader():
 		#Monta Cabecalho da federacao
 		cog.outl("<?xml version='1.0' encoding='UTF-8'?>")
@@ -181,8 +183,7 @@ except Exception as e:
 	#enterParameter(nameParameter, typeDataType) #Insira quantas quiser
 	#finishBuildInteractions()
 
-
-    
+	buildHeader()
     
 	
 
