@@ -8,12 +8,21 @@ except FileNotFoundError:
 except Exception as e:
     print(f"Erro = {e}")
 
-
+print(palavras)
 '''
 
 [[[cog	
 	import cog
+	try:
+		with open("federation.txt", "r") as arq:
+			texto = arq.read()
+			palavras = texto.split()
+	except FileNotFoundError:
+		print(f"Erro ao abrir arquivo")
+	except Exception as e:
+		print(f"Erro = {e}")
 
+	print(palavras)
 	def buildHeader():
 		#Monta Cabecalho da federacao
 		cog.outl("<?xml version='1.0' encoding='UTF-8'?>")
@@ -184,6 +193,8 @@ except Exception as e:
 	#finishBuildInteractions()
 
 	buildHeader()
+	for palavras in palavras:
+		
     
 	
 

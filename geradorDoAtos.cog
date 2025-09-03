@@ -1,72 +1,93 @@
 
-try:
-   	with open('Arquivo-Exemplo.def', 'r') as arq:
-       	texto = arq.read()
-       	palavras = texto.split()
-except FileNotFoundError:
-   	print(f"Erro ao abrir Arquivo.")
-except Exception as e:
-   	print(f"Erro = {e}")
-
 
 '''
 
-[[[cog	
+[[[cog
+
+	try:
+		with open("federation.txt", "r") as arq:
+			texto = arq.read()
+			palavras = texto.split()
+	except FileNotFoundError:
+		print(f"Erro ao abrir arquivo")
+	except Exception as e:
+		print(f"Erro = {e}")
+
 	def buildHeader():
 		#Monta Cabecalho da federacao
 		cog.outl("<?xml version='1.0' encoding='UTF-8'?>")
 		cog.outl("<federation>")
 		#Fim da montagem
 
-	def buildFederation(federationName, typeFederetion):
+	def buildFederation(palavras):
+		if(palavras[0] != "Start>"):
+			cog.error("ERRO: Construtor do cabeçalho da federação tem entrada incorreta")
 
 		#Monta nome da federacao
+		print("entrei na Federacao")
 		cog.out("	<federationName>")
-		cog.out(federationName)
+		cog.out(palavras[1])
 		cog.outl("</federationName>")
 		#Fim da montagem
 
 		#Monta tipo da federacao
 		cog.out("	<federateType>")
-		cog.out(typeFederetion)
+		cog.out(palavras[2])
 		cog.outl("</federateType>")	
 		#Fim da montagem
+		print("vou deletar")
+		del palavras[0]
+		del palavras[0]
+		del palavras[0]
+		print("deletei")#AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQUIIIIIIIIIIIIIIIIII
+		print(palavras[0])
+		return palavras
 
-	def startBuildObject(nameObjectClass, typeSharing, typeDimensions, typeIsAbstract):
+
+	def startBuildObject():
 		#Monta Objeto
 		cog.outl("	<objects>")
 
-	def startBuildClass(nameObjectClass, typeSharing, typeDimensions, typeIsAbstract):
+	def startBuildClass(palavras):
+		if(palavras[0] != "cla>"):
+			cog.erro("Erro: Construtor de class tem entrada incorreta")
+
+
 		#Monta Classe
 		cog.outl("		<objectClass")
 
 		#Monta Name
 		cog.out("			name='")
-		cog.out(nameObjectClass)
+		cog.out(palavras[1])
 		cog.outl("'")
 		#Fim da montagem nome
 		
 		#Monta sharing
 		cog.out("			sharing='")
-		cog.out(typeSharing)
+		cog.out(palavras[2])
 		cog.outl("'")
 		#Fim da montagem sharing
 
 		#Monta dimensions
 		cog.out("			dimensions='")
-		cog.out(typeDimensions)
+		cog.out(palavras[3])
 		cog.outl("'")
 		#Fim da montagem dimensions
 
 		#Monta dimensions
 		cog.out("			isAbstract='")
-		cog.out(typeIsAbstract)
+		cog.out(palavras[4])
 		cog.outl("'")
 		#Fim da montagem isAbstract
 
 		#Inserindo Atributo
 		cog.outl("		>")
 
+		del palavras[0]
+		del palavras[0]
+		del palavras[0]
+		del palavras[0]
+		del palavras[0]
 		#Fim da montagem Classe
 
 	def enterAttribute(nameAttribute, typeDataType, typeOwnership, typeUpdateRate, typeTransportation):
@@ -159,6 +180,12 @@ except Exception as e:
 		#Fim da insersão de interações
 
 	
+	
+	buildHeader()
+	palavras = buildFederation(palavras)
+	startBuildObject()
+	palavras = startBuildClass(palavras)
+		
 
 
 
@@ -168,7 +195,7 @@ except Exception as e:
 
 	#buildHeader()
 	#buildFederation(federationName, typeFederetion)
-	#startBuildObject(nameObjectClass, typeSharing, typeDimensions, typeIsAbstract)	
+	#startBuildObject()	
 	#startBuildClass(nameObjectClass, typeSharing, typeDimensions, typeIsAbstract)
 
 	
