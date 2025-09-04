@@ -1,11 +1,11 @@
-Start> federationName typeFederetion ;
-name Sharing X,Y,Z IsAbstrac ;
-atr> name DataType Ownership UpdateRate Transportation ;
-atr> name DataType Ownership UpdateRate Transportation ;
-int> name Sharing dimensions transportation ;
-par> name dataType ;
-par> name dataType ;
-par> name dataType ;
-int> name Sharing dimensions transportation ;
-par> name dataType ;
-par> name dataType ;
+Start> federationName typeFederetion 
+cla> name Sharing X,Y,Z IsAbstrac 
+atr> name DataType Ownership UpdateRate Transportation 
+atr> name DataType Ownership UpdateRate Transportation 
+int> name Sharing dimensions transportation 
+par> name dataType 
+par> name dataType 
+par> name dataType 
+int> name Sharing dimensions transportation 
+par> name dataType 
+par> name dataType 
