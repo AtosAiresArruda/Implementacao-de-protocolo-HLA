@@ -39,7 +39,7 @@
 		del palavras[0]
 		del palavras[0]
 		del palavras[0]
-		print("deletei")#AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQUIIIIIIIIIIIIIIIIII
+		print("deletei")
 		print(palavras[0])
 		return palavras
 
