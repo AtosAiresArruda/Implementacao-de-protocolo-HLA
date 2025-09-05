@@ -6,6 +6,5 @@ int> name Sharing dimensions transportation
 par> name dataType 
 par> name dataType 
 par> name dataType 
-int> name Sharing dimensions transportation 
-par> name dataType 
-par> name dataType 
+Finish>
+
