@@ -26,7 +26,7 @@ atr>name, DataType, Ownership, UpdateRate, Transportation;
 ... _inserir quantas vezes for nescessário para seu arquivo .xml_  
 int>name, Sharing, dimensions, transportation;  
 par>name, dataType;  
-... _inserir quantas vezes for nescessário para seu arquivo .xml_\n
+... _inserir quantas vezes for nescessário para seu arquivo .xml_
 
 Esse arquivo txt é composto por palavras chaves de depurtação e _strings_ que serão inseridas no arquivo .xml.
 
