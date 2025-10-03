@@ -12,20 +12,20 @@ Ele recebe como entrada um arquivo de texto e entrega como saida sum documento .
 Será nescessário fazer as devidas istalações da bibliotéca cog. Nessa versão do programa utiliza a versão de cog para Python3.9.
 Aqui está um [Link](https://cog.readthedocs.io/en/latest/index.html#installation) direto para o tutorial de configuração da bibliotéca cog.
 
-O programa possui requisições a serem cumpridas para o devido funcionamento. 
+O programa possui requisições a serem cumpridas para o devido funcionamento.   
 Você deverá rodar esse programa em uma pasta que possui um arquivo nomeado por **federation.txt**
 _nota: você pode configurar isso dentro do código caso queira alterar_
 
 O arquivo federation.txt deve cumprir as seguintes especificações:
 **Aruqivo federation.txt**
 
-Start>federationName,typeFederetion;\n
-name,Sharing,x y z, IsAbstrac;\n
-atr>name, DataType, Ownership, UpdateRate, Transportation;\n
-atr>name, DataType, Ownership, UpdateRate, Transportation;\n
-... _inserir quantas vezes for nescessário para seu arquivo .xml_\n 
-int>name, Sharing, dimensions, transportation;\n  
-par>name, dataType;\n
+Start>federationName,typeFederetion;  
+name,Sharing,x y z, IsAbstrac;  
+atr>name, DataType, Ownership, UpdateRate, Transportation;  
+atr>name, DataType, Ownership, UpdateRate, Transportation;  
+... _inserir quantas vezes for nescessário para seu arquivo .xml_  
+int>name, Sharing, dimensions, transportation;  
+par>name, dataType;  
 ... _inserir quantas vezes for nescessário para seu arquivo .xml_\n
 
 Esse arquivo txt é composto por palavras chaves de depurtação e _strings_ que serão inseridas no arquivo .xml.
