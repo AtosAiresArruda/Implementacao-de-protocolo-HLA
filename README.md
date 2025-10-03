@@ -1,13 +1,13 @@
-**PROGRAMA DO ATOS V1.0**
+**PROGRAMA DO ATOS V1.0**  
 acts of program v1.0
 
 
-**Sobre o que se trata:**
+**Sobre o que se trata:**  
 
 Esse programa em Python trata a geração de códigos .xml para a utilização da _High Level Architecture_ (HLA). 
 Ele recebe como entrada um arquivo de texto e entrega como saida sum documento .xml
 
-**Como utilizar:**
+**Como utilizar:** 
 
 Será nescessário fazer as devidas istalações da bibliotéca cog. Nessa versão do programa utiliza a versão de cog para Python3.9.
 Aqui está um [Link](https://cog.readthedocs.io/en/latest/index.html#installation) direto para o tutorial de configuração da bibliotéca cog.
