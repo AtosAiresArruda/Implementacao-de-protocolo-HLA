@@ -22,7 +22,7 @@ O arquivo federation.txt deve cumprir as seguintes especificações:
 Start>federationName,typeFederetion;
 name,Sharing,x y z, IsAbstrac; 
 atr>name, DataType, Ownership, UpdateRate, Transportation; 
-atr>name, DataType, Ownership, UpdateRate, Transportation; 
+atr>name, DataType, Ownership, UpdateRate, Transportation
 ... _inserir quantas vezes for nescessário para seu arquivo .xml_ 
 int>name, Sharing, dimensions, transportation;  
 par>name, dataType;
