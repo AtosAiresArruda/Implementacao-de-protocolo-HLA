@@ -4,9 +4,11 @@ acts of program v1.0
 
 **Sobre o que se trata:**
 
-Esse programa em Python trata a geração de códigos .xml para a utilização da _High Level Architecture_ (HLA). Ele recebe como entrada um arquivo de texto e entrega como saida sum documento .xml
+Esse programa em Python trata a geração de códigos .xml para a utilização da _High Level Architecture_ (HLA). 
+Ele recebe como entrada um arquivo de texto e entrega como saida sum documento .xml
 
 **Como utilizar:**
+
 Será nescessário fazer as devidas istalações da bibliotéca cog. Nessa versão do programa utiliza a versão de cog para Python3.9.
 Aqui está um [Link](https://cog.readthedocs.io/en/latest/index.html#installation) direto para o tutorial de configuração da bibliotéca cog.
 
@@ -28,10 +30,10 @@ par>name, dataType;
 
 Esse arquivo txt é composto por palavras chaves de depurtação e _strings_ que serão inseridas no arquivo .xml.
 
-  **Strart** refere a geração do cabeçalho do arquivo .xml
-  **atr** refere a geração dos atributos de seu federado
-  **int** refere a geração das interações de seu federado
-  **par** refere a geração de parâmetros de seu federado
+-  **Strart** refere a geração do cabeçalho do arquivo .xml
+-  **atr** refere a geração dos atributos de seu federado
+-  **int** refere a geração das interações de seu federado
+- **par** refere a geração de parâmetros de seu federado
 
 Um federado por conter _n_ atributos(atr>), interações(int>) e parâmetros(par>)
 _observações_:
