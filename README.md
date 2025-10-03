@@ -20,12 +20,19 @@ O arquivo federation.txt deve cumprir as seguintes especificações:
 **Aruqivo federation.txt**
 
 Start>federationName,typeFederetion;
+
 name,Sharing,x y z, IsAbstrac;
+
 atr>name, DataType, Ownership, UpdateRate, Transportation;
+
 atr>name, DataType, Ownership, UpdateRate, Transportation;
+
 ... _inserir quantas vezes for nescessário para seu arquivo .xml_
+
 int>name, Sharing, dimensions, transportation;
+
 par>name, dataType;
+
 ... _inserir quantas vezes for nescessário para seu arquivo .xml_
 
 Esse arquivo txt é composto por palavras chaves de depurtação e _strings_ que serão inseridas no arquivo .xml.
