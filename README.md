@@ -35,7 +35,8 @@ Esse arquivo txt é composto por palavras chaves de depurtação e _strings_ que
 -  **int** refere a geração das interações de seu federado
 - **par** refere a geração de parâmetros de seu federado
 
-Um federado por conter _n_ atributos(atr>), interações(int>) e parâmetros(par>)
+Um federado por conter _n_ atributos(atr>), interações(int>) e parâmetros(par>)  
+
 _observações_:
 - Um parâmetro sempre deve vir em seguida de uma interação.
 - atente-se ao inserir os dados em ordem e em quantidades condizentes à demostrada acima.
